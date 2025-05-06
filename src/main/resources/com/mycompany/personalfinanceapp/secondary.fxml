@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="355.0" prefWidth="375.0" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.personalfinanceapp.SecondaryController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <TextField fx:id="descField" alignment="CENTER" promptText="Περιγραφή" />
+    <TextField fx:id="amountField" accessibleRole="NODE" alignment="CENTER" onKeyTyped="#handleSave" promptText="Ποσό" />
+    <ComboBox fx:id="categoryCombo" promptText="Κατηγορία">
+        
+    </ComboBox>
+    <ComboBox fx:id="typeCombo" promptText="Τύπος" />
+    <DatePicker fx:id="datePicker" promptText="Ημερομηνία" />
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#handleSave" style="-fx-background-radius: 5; -fx-text-fill: white; -fx-background-color: #2ecc71;" text="Αποθήκευση" textAlignment="CENTER" />
+        <Button onAction="#handleCancel" style="-fx-background-radius: 5; -fx-background-color: red; -fx-text-fill: white;" text="Ακύρωση" />
+    </HBox>
+</VBox>

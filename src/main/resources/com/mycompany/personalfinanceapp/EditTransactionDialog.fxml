@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="431.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.personalfinanceapp.EditTransactionController">
+
+    <children>
+        <VBox alignment="CENTER" spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+
+            <Label style="-fx-font-size: 16px;" text="Επεξεργασία Συναλλαγής" />
+
+            <Text text="Περιγραφή:" />
+            <TextField fx:id="descriptionField" alignment="CENTER" promptText="Περιγραφή">
+                <font>
+                    <Font size="13.0" />
+                </font>
+            </TextField>
+
+            <Text text="Ποσό:" />
+            <TextField fx:id="amountField" alignment="CENTER" promptText="Ποσό" />
+
+            <Text text="Ημερομηνία:" />
+            <DatePicker fx:id="datePicker" promptText="Ημερομηνία" />
+
+            <Text text="Τύπος:" />
+            <ComboBox fx:id="transactionTypeComboBox" promptText="Επιλέξτε τύπο" />
+
+            <Text text="Κατηγορία:" />
+            <ComboBox fx:id="categoryComboBox" promptText="Επιλέξτε κατηγορία" />
+
+            <HBox alignment="CENTER" spacing="10">
+                <Button onAction="#handleSave" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="Αποθήκευση" />
+                <Button onAction="#handleCancel" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 5;" text="Ακύρωση" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
